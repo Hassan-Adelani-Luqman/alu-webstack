@@ -41,11 +41,11 @@ frontend clickviral-frontend
         default_backend clickviral-backend
 
 frontend clickviral-frontend-https
-        bind *:443 ssl crt /etc/haproxy/certs/clickviral.tech.pem
+        bind *:443 ssl crt /etc/haproxy/certs/www.hassan-adelani.tech.pem
         http-request set-header X-Forwarded-Proto https
         default_backend clickviral-backend
 
 backend clickviral-backend
         balance roundrobin
-        server 151666-web-01 100.25.190.21:80 check
-        server 151666-web-02 54.160.77.90:80 check
+        server 6421-web-01 54.236.142.9:80 check
+        server 6421-web-02 3.89.187.82:80 check
